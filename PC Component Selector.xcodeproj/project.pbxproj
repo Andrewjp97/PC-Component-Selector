@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE5450A62C44093000823F5E /* PC_Component_SelectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450A52C44093000823F5E /* PC_Component_SelectorApp.swift */; };
-		AE5450A82C44093000823F5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450A72C44093000823F5E /* ContentView.swift */; };
+		AE5450A82C44093000823F5E /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450A72C44093000823F5E /* EntryView.swift */; };
 		AE5450AA2C44093200823F5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5450A92C44093200823F5E /* Assets.xcassets */; };
 		AE5450AD2C44093200823F5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5450AC2C44093200823F5E /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		AE5450A22C44093000823F5E /* PC Component Selector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PC Component Selector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5450A52C44093000823F5E /* PC_Component_SelectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PC_Component_SelectorApp.swift; sourceTree = "<group>"; };
-		AE5450A72C44093000823F5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AE5450A72C44093000823F5E /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		AE5450A92C44093200823F5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE5450AC2C44093200823F5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				AE5450A52C44093000823F5E /* PC_Component_SelectorApp.swift */,
-				AE5450A72C44093000823F5E /* ContentView.swift */,
+				AE5450A72C44093000823F5E /* EntryView.swift */,
 				AE5450A92C44093200823F5E /* Assets.xcassets */,
 				AE5450AB2C44093200823F5E /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE5450A82C44093000823F5E /* ContentView.swift in Sources */,
+				AE5450A82C44093000823F5E /* EntryView.swift in Sources */,
 				AE5450A62C44093000823F5E /* PC_Component_SelectorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

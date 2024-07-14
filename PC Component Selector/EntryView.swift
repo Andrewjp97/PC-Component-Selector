@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EntryView.swift
 //  PC Component Selector
 //
 //  Created by Andrew Paterson on 7/14/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct EntryView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    EntryView()
 }

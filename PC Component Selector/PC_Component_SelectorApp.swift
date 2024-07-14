@@ -11,7 +11,7 @@ import SwiftUI
 struct PC_Component_SelectorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EntryView()
         }
     }
 }
