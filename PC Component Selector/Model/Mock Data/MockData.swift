@@ -63,4 +63,26 @@ struct MockData {
                                     sataports: "8",
                                     m2slots: "2")
   
+  public let mockCPU = CPU(id: 1,
+                           name: "AMD Ryzen 9 5950X",
+                           brand: "AMD",
+                           description: "The AMD Ryzen 9 5950X is a 16-core, 32-thread processor with a base clock of 3.4 GHz and a max boost clock of 4.9 GHz. It is built on the 7nm Zen 3 architecture and is compatible with AM4 motherboards. The 5950X has a TDP of 105W.",
+                           photourl1: "http://patersontech.duckdns.org:8043/images/0000J.jpeg",
+                           photourl2: "http://patersontech.duckdns.org:8043/images/0000K.jpeg",
+                           photourl3: "http://patersontech.duckdns.org:8043/images/0000L.jpeg",
+                           photourl4: "",
+                           photourl5: "",
+                           microcenterlink: "https://www.microcenter.com/product/674524/amd-ryzen-9-5950x-vermeer-34ghz-16-core-am4-boxed-processor-heatsink-not-included",
+                           amazonlink: "https://a.co/d/4DcAE1P",
+                           newegglink: "https://newegg.io/nca211bd3a",
+                           bestbuylink: "https://www.bestbuy.com/site/amd-ryzen-9-5950x-4th-gen-16-core-32-threads-unlocked-desktop-processor-without-cooler-black/6438941.p?skuId=6438941",
+                           socket: "AM4",
+                           cores: "16",
+                           threads: "32",
+                           baseclock: "3.4 GHz",
+                           boostclock: "4.9 GHz",
+                           tdp: "105W",
+                           integratedgraphics: "None")
+                           
+  
 }
