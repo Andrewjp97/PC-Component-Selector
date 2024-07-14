@@ -17,10 +17,8 @@ struct RAMSelectionView: View {
         else {
           List {
             ForEach(components) { component in
-              HStack{
-                Text(component.name)
-                Spacer()
-                Text(component.brand)
+              NavigationLink(destination: RAMDetailView(component: component)) {
+                ComponentCardView(component: component)
               }
             }
           }

@@ -15,6 +15,8 @@
 		AE5450B62C44110800823F5E /* ChosenComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B52C44110800823F5E /* ChosenComponentView.swift */; };
 		AE5450B82C4411AD00823F5E /* ComponentSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */; };
 		AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B92C44127A00823F5E /* RAMSelectionView.swift */; };
+		AE5450BC2C44159B00823F5E /* ComponentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450BB2C44159B00823F5E /* ComponentCardView.swift */; };
+		AE5450BE2C44187400823F5E /* RAMDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450BD2C44187400823F5E /* RAMDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		AE5450B52C44110800823F5E /* ChosenComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenComponentView.swift; sourceTree = "<group>"; };
 		AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentSelectionView.swift; sourceTree = "<group>"; };
 		AE5450B92C44127A00823F5E /* RAMSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMSelectionView.swift; sourceTree = "<group>"; };
+		AE5450BB2C44159B00823F5E /* ComponentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCardView.swift; sourceTree = "<group>"; };
+		AE5450BD2C44187400823F5E /* RAMDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				AE5450B52C44110800823F5E /* ChosenComponentView.swift */,
 				AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */,
 				AE5450B92C44127A00823F5E /* RAMSelectionView.swift */,
+				AE5450BD2C44187400823F5E /* RAMDetailView.swift */,
+				AE5450BB2C44159B00823F5E /* ComponentCardView.swift */,
 				AE5450B32C440AC100823F5E /* Model.swift */,
 				AE5450A92C44093200823F5E /* Assets.xcassets */,
 				AE5450AB2C44093200823F5E /* Preview Content */,
@@ -153,6 +159,8 @@
 				AE5450A82C44093000823F5E /* EntryView.swift in Sources */,
 				AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */,
 				AE5450B82C4411AD00823F5E /* ComponentSelectionView.swift in Sources */,
+				AE5450BE2C44187400823F5E /* RAMDetailView.swift in Sources */,
+				AE5450BC2C44159B00823F5E /* ComponentCardView.swift in Sources */,
 				AE5450B62C44110800823F5E /* ChosenComponentView.swift in Sources */,
 				AE5450A62C44093000823F5E /* PC_Component_SelectorApp.swift in Sources */,
 			);
