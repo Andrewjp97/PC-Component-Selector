@@ -12,6 +12,9 @@
 		AE5450AA2C44093200823F5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5450A92C44093200823F5E /* Assets.xcassets */; };
 		AE5450AD2C44093200823F5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5450AC2C44093200823F5E /* Preview Assets.xcassets */; };
 		AE5450B42C440AC100823F5E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B32C440AC100823F5E /* Model.swift */; };
+		AE5450B62C44110800823F5E /* ChosenComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B52C44110800823F5E /* ChosenComponentView.swift */; };
+		AE5450B82C4411AD00823F5E /* ComponentSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */; };
+		AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B92C44127A00823F5E /* RAMSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		AE5450A92C44093200823F5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE5450AC2C44093200823F5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE5450B32C440AC100823F5E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AE5450B52C44110800823F5E /* ChosenComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenComponentView.swift; sourceTree = "<group>"; };
+		AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentSelectionView.swift; sourceTree = "<group>"; };
+		AE5450B92C44127A00823F5E /* RAMSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			children = (
 				AE5450A52C44093000823F5E /* PC_Component_SelectorApp.swift */,
 				AE5450A72C44093000823F5E /* EntryView.swift */,
+				AE5450B52C44110800823F5E /* ChosenComponentView.swift */,
+				AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */,
+				AE5450B92C44127A00823F5E /* RAMSelectionView.swift */,
 				AE5450B32C440AC100823F5E /* Model.swift */,
 				AE5450A92C44093200823F5E /* Assets.xcassets */,
 				AE5450AB2C44093200823F5E /* Preview Content */,
@@ -142,6 +151,9 @@
 			files = (
 				AE5450B42C440AC100823F5E /* Model.swift in Sources */,
 				AE5450A82C44093000823F5E /* EntryView.swift in Sources */,
+				AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */,
+				AE5450B82C4411AD00823F5E /* ComponentSelectionView.swift in Sources */,
+				AE5450B62C44110800823F5E /* ChosenComponentView.swift in Sources */,
 				AE5450A62C44093000823F5E /* PC_Component_SelectorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

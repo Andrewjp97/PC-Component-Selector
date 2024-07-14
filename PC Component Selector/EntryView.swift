@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct EntryView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  @State private var components: [PCComponent] = []
+  var body: some View {
+    ZStack {
+      TabView {
+        ChosenComponentView()
+          .tabItem {
+            Label("Build", systemImage: "pc")
+          }
+        ComponentSelectionView()
+          .tabItem {
+            Label("Parts", systemImage: "cpu")
+          }
+      }
     }
+  }
 }
 
 #Preview {
-    EntryView()
+  EntryView()
 }
