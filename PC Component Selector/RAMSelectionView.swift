@@ -34,7 +34,7 @@ struct RAMSelectionView: View {
     }
   
   func fetchRAM() async throws -> [RAM] {
-    let url = URL(string: "http://tower.local:1338/ram")!
+    let url = URL(string: "http://patersontech.duckdns.org:1338/ram")!
     let (data, _) = try await URLSession.shared.data(from: url)
     return try JSONDecoder().decode([RAM].self, from: data)
   }

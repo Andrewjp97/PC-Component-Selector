@@ -1,5 +1,5 @@
 //
-//  RAMDetailView.swift
+//  MotherboardDetailView.swift
 //  PC Component Selector
 //
 //  Created by Andrew Paterson on 7/14/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RAMDetailView: View {
-  var component: RAM
+struct MotherboardDetailView: View {
+  var component: Motherboard
     var body: some View {
       ScrollView {
         VStack {
@@ -26,15 +26,22 @@ struct RAMDetailView: View {
           Text(component.description)
             .font(.body)
           HStack {
-            Text("Capacity: \(component.capacity)")
+            Text("Chipset: \(component.chipset)")
             Spacer()
-            Text("Speed: \(component.speed)")
+            Text("Socket: \(component.socket)")
           }
           HStack {
-            Text("DDR Class: \(component.ddrclass)")
+            Text("DDR Class: \(component.memorytype)")
             Spacer()
-            Text("DIMMs: \(component.dims)")
+            Text("DIMMs: \(component.memoryslots)")
           }
+          Text(component.pcieslots)
+          HStack {
+            Text("Form Factor: \(component.formfactor)")
+            Spacer()
+            Text("Sata Pports: \(component.sataports)")
+          }
+          Text("M.2 Slots: \(component.m2slots)")
           ConditionalLinkView(component: component)
           Button {
             // TODO: Add Component to selected components
@@ -48,9 +55,8 @@ struct RAMDetailView: View {
         .padding([.leading, .trailing])
       }
     }
-      
 }
 
 #Preview {
-  RAMDetailView(component: MockData().mockRam)
+  MotherboardDetailView(component: MockData().mockMotherboard)
 }

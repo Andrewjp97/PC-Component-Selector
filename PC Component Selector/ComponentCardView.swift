@@ -12,7 +12,7 @@ struct ComponentCardView: View {
   var body: some View {
     VStack {
       Text(component.name)
-      AsyncImage(url: URL(string: component.photourl)){ result in
+      AsyncImage(url: URL(string: component.photourl1)){ result in
         result.image?
           .resizable()
           .scaledToFill()
@@ -23,13 +23,5 @@ struct ComponentCardView: View {
 }
 
 #Preview {
-  ComponentCardView(component: PCComponent(id: 1,
-                                           name: "Example PC Component",
-                                           brand: "PatersonTech",
-                                           description: "This is an example PC component. It is a placeholder for the real thing.",
-                                           photourl: "http://tower.local:8043/images/00001.jpeg",
-                                           microcenterlink: "",
-                                           amazonlink: "",
-                                           newegglink: "",
-                                           bestbuylink: ""))
+  ComponentCardView(component: MockData().mockComponent)
 }

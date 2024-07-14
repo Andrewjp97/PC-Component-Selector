@@ -17,6 +17,11 @@
 		AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450B92C44127A00823F5E /* RAMSelectionView.swift */; };
 		AE5450BC2C44159B00823F5E /* ComponentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450BB2C44159B00823F5E /* ComponentCardView.swift */; };
 		AE5450BE2C44187400823F5E /* RAMDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450BD2C44187400823F5E /* RAMDetailView.swift */; };
+		AE5450C02C44241600823F5E /* ConditionalLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450BF2C44241600823F5E /* ConditionalLinkView.swift */; };
+		AE5450C22C4424CE00823F5E /* ConditionalPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450C12C4424CE00823F5E /* ConditionalPhotoView.swift */; };
+		AE5450C42C44280100823F5E /* MotherboardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450C32C44280100823F5E /* MotherboardSelectionView.swift */; };
+		AE5450C62C44284000823F5E /* MotherboardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450C52C44284000823F5E /* MotherboardDetailView.swift */; };
+		AE5450C82C444AAE00823F5E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450C72C444AAE00823F5E /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,12 @@
 		AE5450B92C44127A00823F5E /* RAMSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMSelectionView.swift; sourceTree = "<group>"; };
 		AE5450BB2C44159B00823F5E /* ComponentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentCardView.swift; sourceTree = "<group>"; };
 		AE5450BD2C44187400823F5E /* RAMDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMDetailView.swift; sourceTree = "<group>"; };
+		AE5450BF2C44241600823F5E /* ConditionalLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalLinkView.swift; sourceTree = "<group>"; };
+		AE5450C12C4424CE00823F5E /* ConditionalPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalPhotoView.swift; sourceTree = "<group>"; };
+		AE5450C32C44280100823F5E /* MotherboardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherboardSelectionView.swift; sourceTree = "<group>"; };
+		AE5450C52C44284000823F5E /* MotherboardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherboardDetailView.swift; sourceTree = "<group>"; };
+		AE5450C72C444AAE00823F5E /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		AE5450C92C444F7D00823F5E /* PC-Component-Selector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PC-Component-Selector-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +74,18 @@
 		AE5450A42C44093000823F5E /* PC Component Selector */ = {
 			isa = PBXGroup;
 			children = (
+				AE5450C92C444F7D00823F5E /* PC-Component-Selector-Info.plist */,
 				AE5450A52C44093000823F5E /* PC_Component_SelectorApp.swift */,
 				AE5450A72C44093000823F5E /* EntryView.swift */,
 				AE5450B52C44110800823F5E /* ChosenComponentView.swift */,
 				AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */,
+				AE5450C32C44280100823F5E /* MotherboardSelectionView.swift */,
+				AE5450C52C44284000823F5E /* MotherboardDetailView.swift */,
+				AE5450C72C444AAE00823F5E /* MockData.swift */,
 				AE5450B92C44127A00823F5E /* RAMSelectionView.swift */,
 				AE5450BD2C44187400823F5E /* RAMDetailView.swift */,
+				AE5450C12C4424CE00823F5E /* ConditionalPhotoView.swift */,
+				AE5450BF2C44241600823F5E /* ConditionalLinkView.swift */,
 				AE5450BB2C44159B00823F5E /* ComponentCardView.swift */,
 				AE5450B32C440AC100823F5E /* Model.swift */,
 				AE5450A92C44093200823F5E /* Assets.xcassets */,
@@ -158,10 +175,15 @@
 				AE5450B42C440AC100823F5E /* Model.swift in Sources */,
 				AE5450A82C44093000823F5E /* EntryView.swift in Sources */,
 				AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */,
+				AE5450C82C444AAE00823F5E /* MockData.swift in Sources */,
+				AE5450C62C44284000823F5E /* MotherboardDetailView.swift in Sources */,
+				AE5450C42C44280100823F5E /* MotherboardSelectionView.swift in Sources */,
+				AE5450C02C44241600823F5E /* ConditionalLinkView.swift in Sources */,
 				AE5450B82C4411AD00823F5E /* ComponentSelectionView.swift in Sources */,
 				AE5450BE2C44187400823F5E /* RAMDetailView.swift in Sources */,
 				AE5450BC2C44159B00823F5E /* ComponentCardView.swift in Sources */,
 				AE5450B62C44110800823F5E /* ChosenComponentView.swift in Sources */,
+				AE5450C22C4424CE00823F5E /* ConditionalPhotoView.swift in Sources */,
 				AE5450A62C44093000823F5E /* PC_Component_SelectorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +321,7 @@
 				DEVELOPMENT_TEAM = 3W67YYZ9EF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PC-Component-Selector-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +351,7 @@
 				DEVELOPMENT_TEAM = 3W67YYZ9EF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PC-Component-Selector-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
