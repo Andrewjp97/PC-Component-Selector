@@ -290,6 +290,58 @@ class CPU: PCComponent {
 
 class GPU: PCComponent {
   
+  public var chipset: String
+  public var memory: String
+  public var tdp: String
+  
+  enum CodingKeys: String, CodingKey {
+    case chipset
+    case memory
+    case tdp
+  }
+  
+  init(id: Int,
+       name: String,
+       brand: String,
+       description: String,
+       photourl1: String,
+       photourl2: String,
+       photourl3: String,
+       photourl4: String,
+       photourl5: String,
+       microcenterlink: String,
+       amazonlink: String,
+       newegglink: String,
+       bestbuylink: String,
+       chipset: String,
+       memory: String,
+       tdp: String) {
+    self.chipset = chipset
+    self.memory = memory
+    self.tdp = tdp
+    super.init(id: id,
+               name: name,
+               brand: brand,
+               description: description,
+               photourl1: photourl1,
+               photourl2: photourl2,
+               photourl3: photourl3,
+               photourl4: photourl4,
+               photourl5: photourl5,
+               microcenterlink: microcenterlink,
+               amazonlink: amazonlink,
+               newegglink: newegglink,
+               bestbuylink: bestbuylink)
+  }
+  
+  required init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    self.chipset = try container.decode(String.self, forKey: .chipset)
+    self.memory = try container.decode(String.self, forKey: .memory)
+    self.tdp = try container.decode(String.self, forKey: .tdp)
+    try super.init(from: decoder)
+  }
+  
 }
 
 class Storage: PCComponent {
