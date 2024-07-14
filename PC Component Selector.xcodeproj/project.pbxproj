@@ -74,22 +74,15 @@
 		AE5450A42C44093000823F5E /* PC Component Selector */ = {
 			isa = PBXGroup;
 			children = (
+				AE5450D32C445F4E00823F5E /* Utilities */,
+				AE5450D22C445F4800823F5E /* Managers */,
+				AE5450D12C445F4100823F5E /* Extensions */,
+				AE5450AB2C44093200823F5E /* Preview Content */,
+				AE5450CD2C445E9B00823F5E /* Model */,
+				AE5450CA2C445E5E00823F5E /* Views */,
 				AE5450C92C444F7D00823F5E /* PC-Component-Selector-Info.plist */,
 				AE5450A52C44093000823F5E /* PC_Component_SelectorApp.swift */,
-				AE5450A72C44093000823F5E /* EntryView.swift */,
-				AE5450B52C44110800823F5E /* ChosenComponentView.swift */,
-				AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */,
-				AE5450C32C44280100823F5E /* MotherboardSelectionView.swift */,
-				AE5450C52C44284000823F5E /* MotherboardDetailView.swift */,
-				AE5450C72C444AAE00823F5E /* MockData.swift */,
-				AE5450B92C44127A00823F5E /* RAMSelectionView.swift */,
-				AE5450BD2C44187400823F5E /* RAMDetailView.swift */,
-				AE5450C12C4424CE00823F5E /* ConditionalPhotoView.swift */,
-				AE5450BF2C44241600823F5E /* ConditionalLinkView.swift */,
-				AE5450BB2C44159B00823F5E /* ComponentCardView.swift */,
-				AE5450B32C440AC100823F5E /* Model.swift */,
 				AE5450A92C44093200823F5E /* Assets.xcassets */,
-				AE5450AB2C44093200823F5E /* Preview Content */,
 			);
 			path = "PC Component Selector";
 			sourceTree = "<group>";
@@ -100,6 +93,93 @@
 				AE5450AC2C44093200823F5E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE5450CA2C445E5E00823F5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450D02C445F2500823F5E /* Tab Views */,
+				AE5450CF2C445ECA00823F5E /* Selection Views */,
+				AE5450CC2C445E7300823F5E /* Extracted Views */,
+				AE5450CB2C445E6700823F5E /* Detail Views */,
+				AE5450A72C44093000823F5E /* EntryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE5450CB2C445E6700823F5E /* Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450C52C44284000823F5E /* MotherboardDetailView.swift */,
+				AE5450BD2C44187400823F5E /* RAMDetailView.swift */,
+			);
+			path = "Detail Views";
+			sourceTree = "<group>";
+		};
+		AE5450CC2C445E7300823F5E /* Extracted Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450C12C4424CE00823F5E /* ConditionalPhotoView.swift */,
+				AE5450BF2C44241600823F5E /* ConditionalLinkView.swift */,
+				AE5450BB2C44159B00823F5E /* ComponentCardView.swift */,
+			);
+			path = "Extracted Views";
+			sourceTree = "<group>";
+		};
+		AE5450CD2C445E9B00823F5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450B32C440AC100823F5E /* Model.swift */,
+				AE5450CE2C445EA000823F5E /* Mock Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE5450CE2C445EA000823F5E /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450C72C444AAE00823F5E /* MockData.swift */,
+			);
+			path = "Mock Data";
+			sourceTree = "<group>";
+		};
+		AE5450CF2C445ECA00823F5E /* Selection Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450B92C44127A00823F5E /* RAMSelectionView.swift */,
+				AE5450C32C44280100823F5E /* MotherboardSelectionView.swift */,
+			);
+			path = "Selection Views";
+			sourceTree = "<group>";
+		};
+		AE5450D02C445F2500823F5E /* Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE5450B52C44110800823F5E /* ChosenComponentView.swift */,
+				AE5450B72C4411AD00823F5E /* ComponentSelectionView.swift */,
+			);
+			path = "Tab Views";
+			sourceTree = "<group>";
+		};
+		AE5450D12C445F4100823F5E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE5450D22C445F4800823F5E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AE5450D32C445F4E00823F5E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
