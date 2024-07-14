@@ -84,5 +84,21 @@ struct MockData {
                            tdp: "105W",
                            integratedgraphics: "None")
                            
+  public let mockGPU = GPU(id: 1,
+                           name: "NVIDIA GeForce RTX 3090 Founders Edition (Refurbished)",
+                           brand: "NVIDIA",
+                           description: "The NVIDIA GeForce RTX 3090 is a high-end graphics card with 24GB of GDDR6X memory. It features 10496 CUDA cores and a boost clock of 1695 MHz. The RTX 3090 is built on the Ampere architecture and supports real-time ray tracing and DLSS.",
+                           photourl1: "http://patersontech.duckdns.org:8043/images/0000R.jpeg",
+                           photourl2: "http://patersontech.duckdns.org:8043/images/0000S.jpeg",
+                           photourl3: "http://patersontech.duckdns.org:8043/images/0000T.jpeg",
+                           photourl4: "http://patersontech.duckdns.org:8043/images/0000U.jpeg",
+                           photourl5: "http://patersontech.duckdns.org:8043/images/0000V.jpeg",
+                           microcenterlink: "https://www.microcenter.com/product/677156/nvidia-geforce-rtx-3090-founders-edition-dual-fan-24gb-gddr6x-pcie-40-graphics-card-(refurbished)",
+                           amazonlink: "https://a.co/d/6hwpKlj",
+                           newegglink: "https://newegg.io/nc8a8c95f7",
+                           bestbuylink: "",
+                           chipset: "NVIDIA GeForce RTX 3090",
+                           memory: "24GB GDDR6X",
+                           tdp: "350W")
   
 }
