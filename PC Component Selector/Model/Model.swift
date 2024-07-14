@@ -214,6 +214,78 @@ class Motherboard: PCComponent {
 
 class CPU: PCComponent {
   
+  public var socket: String
+  public var cores: String
+  public var threads: String
+  public var baseclock: String
+  public var boostclock: String
+  public var tdp: String
+  public var integratedgraphics: String
+  
+  enum CodingKeys: String, CodingKey {
+    case socket
+    case cores
+    case threads
+    case baseclock
+    case boostclock
+    case tdp
+    case integratedgraphics
+  }
+  
+  init(id: Int,
+       name: String,
+       brand: String,
+       description: String,
+       photourl1: String,
+       photourl2: String,
+       photourl3: String,
+       photourl4: String,
+       photourl5: String,
+       microcenterlink: String,
+       amazonlink: String,
+       newegglink: String,
+       bestbuylink: String,
+       socket: String,
+       cores: String,
+       threads: String,
+       baseclock: String,
+       boostclock: String,
+       tdp: String,
+       integratedgraphics: String) {
+    self.socket = socket
+    self.cores = cores
+    self.threads = threads
+    self.baseclock = baseclock
+    self.boostclock = boostclock
+    self.tdp = tdp
+    self.integratedgraphics = integratedgraphics
+    super.init(id: id,
+               name: name,
+               brand: brand,
+               description: description,
+               photourl1: photourl1,
+               photourl2: photourl2,
+               photourl3: photourl3,
+               photourl4: photourl4,
+               photourl5: photourl5,
+               microcenterlink: microcenterlink,
+               amazonlink: amazonlink,
+               newegglink: newegglink,
+               bestbuylink: bestbuylink)
+  }
+  
+  required init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    self.socket = try container.decode(String.self, forKey: .socket)
+    self.cores = try container.decode(String.self, forKey: .cores)
+    self.threads = try container.decode(String.self, forKey: .threads)
+    self.baseclock = try container.decode(String.self, forKey: .baseclock)
+    self.boostclock = try container.decode(String.self, forKey: .boostclock)
+    self.tdp = try container.decode(String.self, forKey: .tdp)
+    self.integratedgraphics = try container.decode(String.self, forKey: .integratedgraphics)
+    try super.init(from: decoder)
+  }
+  
 }
 
 class GPU: PCComponent {
