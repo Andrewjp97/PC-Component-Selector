@@ -13,6 +13,7 @@ struct ComponentSelectionView: View {
         List {
           NavigationLink("RAM", destination: RAMSelectionView())
           NavigationLink("Motherboard", destination: MotherboardSelectionView())
+          NavigationLink("CPU", destination: CPUSelectionView())
         }
         .navigationTitle("PC Components")
       }
