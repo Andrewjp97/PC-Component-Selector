@@ -25,16 +25,36 @@ struct RAMDetailView: View {
             .font(.title2)
           Text(component.description)
             .font(.body)
-          HStack {
-            Text("Capacity: \(component.capacity)")
-            Spacer()
-            Text("Speed: \(component.speed)")
-          }
-          HStack {
-            Text("DDR Class: \(component.ddrclass)")
-            Spacer()
-            Text("DIMMs: \(component.dims)")
-          }
+          Text("Specifications")
+            .font(.title3)
+          ConditionalComponentSpecification(componentSpecificationTitle: "DIMMs",
+                                            componentSpecification: component.dims)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Speed",
+                                            componentSpecification: component.speed)
+          ConditionalComponentSpecification(componentSpecificationTitle: "DDR Class",
+                                            componentSpecification: component.ddrclass)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Capacity",
+                                            componentSpecification: component.capacity)
+          ConditionalComponentSpecification(componentSpecificationTitle: "CAS Latency",
+                                            componentSpecification: component.caslatency)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Timing",
+                                            componentSpecification: component.timing)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Heat Spreader",
+                                            componentSpecification: component.heatspreader)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Voltage",
+                                            componentSpecification: component.voltage)
+          ConditionalComponentSpecification(componentSpecificationTitle: "ECC",
+                                            componentSpecification: component.ecc)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Color",
+                                            componentSpecification: component.color)
+          ConditionalComponentSpecification(componentSpecificationTitle: "RGB",
+                                            componentSpecification: component.rgb)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Buffered or Registered",
+                                            componentSpecification: component.bufferedorregistered)
+          ConditionalComponentSpecification(componentSpecificationTitle: "Model",
+                                            componentSpecification: component.model)
+          Text("Available For Purchase At:")
+            .font(.title3)
           ConditionalLinkView(component: component)
           Button {
             // TODO: Add Component to selected components

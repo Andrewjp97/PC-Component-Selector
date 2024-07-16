@@ -26,6 +26,7 @@
 		AE5450D72C44626E00823F5E /* CPUDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450D62C44626E00823F5E /* CPUDetailView.swift */; };
 		AE5450D92C446C3800823F5E /* GPUSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450D82C446C3800823F5E /* GPUSelectionView.swift */; };
 		AE5450DB2C446C4300823F5E /* GPUDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450DA2C446C4300823F5E /* GPUDetailView.swift */; };
+		AE5450DD2C469F3700823F5E /* ConditionalComponentSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5450DC2C469F3700823F5E /* ConditionalComponentSpecification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		AE5450D62C44626E00823F5E /* CPUDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUDetailView.swift; sourceTree = "<group>"; };
 		AE5450D82C446C3800823F5E /* GPUSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUSelectionView.swift; sourceTree = "<group>"; };
 		AE5450DA2C446C4300823F5E /* GPUDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUDetailView.swift; sourceTree = "<group>"; };
+		AE5450DC2C469F3700823F5E /* ConditionalComponentSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalComponentSpecification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				AE5450C12C4424CE00823F5E /* ComponentPhotoView.swift */,
 				AE5450BF2C44241600823F5E /* ConditionalLinkView.swift */,
 				AE5450BB2C44159B00823F5E /* ComponentCardView.swift */,
+				AE5450DC2C469F3700823F5E /* ConditionalComponentSpecification.swift */,
 			);
 			path = "Extracted Views";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5450DD2C469F3700823F5E /* ConditionalComponentSpecification.swift in Sources */,
 				AE5450B42C440AC100823F5E /* Model.swift in Sources */,
 				AE5450A82C44093000823F5E /* EntryView.swift in Sources */,
 				AE5450BA2C44127A00823F5E /* RAMSelectionView.swift in Sources */,

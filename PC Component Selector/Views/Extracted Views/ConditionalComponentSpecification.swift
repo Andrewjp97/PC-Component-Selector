@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct ConditionalComponentSpecification: View {
+  var componentSpecificationTitle: String
+  var componentSpecification: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      if !componentSpecification.isEmpty {
+        HStack {
+          Text(componentSpecificationTitle)
+            .bold()
+          Spacer()
+          Text(componentSpecification)
+        }
+        .padding([.leading, .trailing])
+      }
+      else {
+        EmptyView()
+      }
     }
 }
 
 #Preview {
-    ConditionalComponentSpecification()
+  ConditionalComponentSpecification(componentSpecificationTitle: "Test",
+                                    componentSpecification: "Test Spec")
 }
