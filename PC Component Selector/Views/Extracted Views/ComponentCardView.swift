@@ -11,8 +11,8 @@ struct ComponentCardView: View {
   var component: PCComponent
   var body: some View {
     VStack {
-      Text(component.name)
-      AsyncImage(url: URL(string: component.photourl1)){ result in
+      Text(component.title)
+      AsyncImage(url: URL(string: component.photourls[0])){ result in
         result.image?
           .resizable()
           .scaledToFill()

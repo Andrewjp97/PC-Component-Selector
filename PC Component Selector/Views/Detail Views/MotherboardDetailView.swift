@@ -14,34 +14,34 @@ struct MotherboardDetailView: View {
         VStack {
           ScrollView(.horizontal) {
             HStack {
-              ConditionalPhotoView(component: component)
+              ComponentPhotoView(component: component)
             }
             .scrollTargetLayout()
           }
           .scrollTargetBehavior(.viewAligned)
-          Text(component.name)
+          Text(component.title)
             .font(.title)
           Text(component.brand)
             .font(.title2)
           Text(component.description)
             .font(.body)
-          HStack {
-            Text("Chipset: \(component.chipset)")
-            Spacer()
-            Text("Socket: \(component.socket)")
-          }
-          HStack {
-            Text("DDR Class: \(component.memorytype)")
-            Spacer()
-            Text("DIMMs: \(component.memoryslots)")
-          }
-          Text(component.pcieslots)
-          HStack {
-            Text("Form Factor: \(component.formfactor)")
-            Spacer()
-            Text("Sata Pports: \(component.sataports)")
-          }
-          Text("M.2 Slots: \(component.m2slots)")
+//          HStack {
+//            Text("Chipset: \(component.chipset)")
+//            Spacer()
+//            Text("Socket: \(component.socket)")
+//          }
+//          HStack {
+//            Text("DDR Class: \(component.memorytype)")
+//            Spacer()
+//            Text("DIMMs: \(component.memoryslots)")
+//          }
+//          Text(component.pcieslots)
+//          HStack {
+//            Text("Form Factor: \(component.formfactor)")
+//            Spacer()
+//            Text("Sata Pports: \(component.sataports)")
+//          }
+//          Text("M.2 Slots: \(component.m2slots)")
           ConditionalLinkView(component: component)
           Button {
             // TODO: Add Component to selected components
@@ -57,6 +57,6 @@ struct MotherboardDetailView: View {
     }
 }
 
-#Preview {
-  MotherboardDetailView(component: MockData().mockMotherboard)
-}
+//#Preview {
+//  MotherboardDetailView(component: MockData().mockMotherboard)
+//}

@@ -10,63 +10,48 @@ import Foundation
 public class PCComponent: Codable, Identifiable {
   
   public var id: Int
-  public var name: String
+  public var title: String
   public var brand: String
   public var description: String
-  public var photourl1: String
-  public var photourl2: String
-  public var photourl3: String
-  public var photourl4: String
-  public var photourl5: String
+  public var photourls: [String]
   public var microcenterlink: String
   public var amazonlink: String
   public var newegglink: String
   public var bestbuylink: String
-  
-  public init(id: Int,
-              name: String,
-              brand: String,
-              description: String,
-              photourl1: String,
-              photourl2: String,
-              photourl3: String,
-              photourl4: String,
-              photourl5: String,
-              microcenterlink: String,
-              amazonlink: String,
-              newegglink: String,
-              bestbuylink: String) {
+
+  init(id: Int,
+       title: String,
+       brand: String,
+       description: String,
+       photourls: [String],
+       microcenterlink: String,
+       amazonlink: String,
+       newegglink: String,
+       bestbuylink: String) {
     self.id = id
-    self.name = name
+    self.title = title
     self.brand = brand
     self.description = description
-    self.photourl1 = photourl1
-    self.photourl2 = photourl2
-    self.photourl3 = photourl3
-    self.photourl4 = photourl4
-    self.photourl5 = photourl5
+    self.photourls = photourls
     self.microcenterlink = microcenterlink
     self.amazonlink = amazonlink
     self.newegglink = newegglink
     self.bestbuylink = bestbuylink
   }
   
-  required public init(from decoder: any Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.id = try container.decode(Int.self, forKey: .id)
-    self.name = try container.decode(String.self, forKey: .name)
-    self.brand = try container.decode(String.self, forKey: .brand)
-    self.description = try container.decode(String.self, forKey: .description)
-    self.photourl1 = try container.decode(String.self, forKey: .photourl1)
-    self.photourl2 = try container.decode(String.self, forKey: .photourl2)
-    self.photourl3 = try container.decode(String.self, forKey: .photourl3)
-    self.photourl4 = try container.decode(String.self, forKey: .photourl4)
-    self.photourl5 = try container.decode(String.self, forKey: .photourl5)
-    self.microcenterlink = try container.decode(String.self, forKey: .microcenterlink)
-    self.amazonlink = try container.decode(String.self, forKey: .amazonlink)
-    self.newegglink = try container.decode(String.self, forKey: .newegglink)
-    self.bestbuylink = try container.decode(String.self, forKey: .bestbuylink)
+  public required init(from decoder: Decoder) throws {
+    let container =   try decoder.container(keyedBy: CodingKeys.self)
+    id =              try container.decode(Int.self, forKey: .id)
+    title =           try container.decode(String.self, forKey: .title)
+    brand =           try container.decode(String.self, forKey: .brand)
+    description =     try container.decode(String.self, forKey: .description)
+    photourls =       try container.decode([String].self, forKey: .photourls)
+    microcenterlink = try container.decode(String.self, forKey: .microcenterlink)
+    amazonlink =      try container.decode(String.self, forKey: .amazonlink)
+    newegglink =      try container.decode(String.self, forKey: .newegglink)
+    bestbuylink =     try container.decode(String.self, forKey: .bestbuylink)
   }
+
   
 }
 
@@ -76,23 +61,39 @@ class RAM: PCComponent {
   public var speed: String
   public var ddrclass: String
   public var capacity: String
+  public var caslatency: String
+  public var timing: String
+  public var rgb: String
+  public var model: String
+  public var voltage: String
+  public var ecc: String
+  public var color: String
+  public var bufferedorregistered: String
+  public var heatspreader: String
   
   enum CodingKeys: String, CodingKey {
+    
     case dims
     case speed
     case ddrclass
     case capacity
+    case caslatency
+    case timing
+    case rgb
+    case model
+    case voltage
+    case ecc
+    case color
+    case bufferedorregistered
+    case heatspreader
+    
   }
   
   init(id: Int,
-       name: String,
+       title: String,
        brand: String,
        description: String,
-       photourl1: String,
-       photourl2: String,
-       photourl3: String,
-       photourl4: String,
-       photourl5: String,
+       photourls: [String],
        microcenterlink: String,
        amazonlink: String,
        newegglink: String,
@@ -100,247 +101,74 @@ class RAM: PCComponent {
        dims: String,
        speed: String,
        ddrclass: String,
-       capacity: String) {
+       capacity: String,
+       caslatency: String,
+       timing: String,
+       rgb: String,
+       model: String,
+       voltage: String,
+       ecc: String,
+       color: String,
+       bufferedorregistered: String,
+       heatspreader: String) {
+    
     self.dims = dims
     self.speed = speed
     self.ddrclass = ddrclass
     self.capacity = capacity
+    self.caslatency = caslatency
+    self.timing = timing
+    self.rgb = rgb
+    self.model = model
+    self.voltage = voltage
+    self.ecc = ecc
+    self.color = color
+    self.bufferedorregistered = bufferedorregistered
+    self.heatspreader = heatspreader
     super.init(id: id,
-               name: name,
+               title: title,
                brand: brand,
                description: description,
-               photourl1: photourl1,
-               photourl2: photourl2,
-               photourl3: photourl3,
-               photourl4: photourl4,
-               photourl5: photourl5,
+               photourls: photourls,
                microcenterlink: microcenterlink,
                amazonlink: amazonlink,
                newegglink: newegglink,
                bestbuylink: bestbuylink)
+    
   }
   
-  required init(from decoder: any Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.dims = try container.decode(String.self, forKey: .dims)
-    self.speed = try container.decode(String.self, forKey: .speed)
-    self.ddrclass = try container.decode(String.self, forKey: .ddrclass)
-    self.capacity = try container.decode(String.self, forKey: .capacity)
+  required init(from decoder: Decoder) throws {
+    
+    let container =         try decoder.container(keyedBy: CodingKeys.self)
+    dims =                  try container.decode(String.self, forKey: .dims)
+    speed =                 try container.decode(String.self, forKey: .speed)
+    ddrclass =              try container.decode(String.self, forKey: .ddrclass)
+    capacity =              try container.decode(String.self, forKey: .capacity)
+    caslatency =            try container.decode(String.self, forKey: .caslatency)
+    timing =                try container.decode(String.self, forKey: .timing)
+    rgb =                   try container.decode(String.self, forKey: .rgb)
+    model =                 try container.decode(String.self, forKey: .model)
+    voltage =               try container.decode(String.self, forKey: .voltage)
+    ecc =                   try container.decode(String.self, forKey: .ecc)
+    color =                 try container.decode(String.self, forKey: .color)
+    bufferedorregistered =  try container.decode(String.self, forKey: .bufferedorregistered)
+    heatspreader =          try container.decode(String.self, forKey: .heatspreader)
     try super.init(from: decoder)
+    
   }
+  
   
 }
 
 class Motherboard: PCComponent {
-  
-  public var socket: String
-  public var formfactor: String
-  public var chipset: String
-  public var memorytype: String
-  public var memoryslots: String
-  public var pcieslots: String
-  public var sataports: String
-  public var m2slots: String
-  
-  enum CodingKeys: String, CodingKey {
-    case socket
-    case formfactor
-    case chipset
-    case memorytype
-    case memoryslots
-    case pcieslots
-    case sataports
-    case m2slots
-  }
-  
-  init(id: Int,
-       name: String,
-       brand: String,
-       description: String,
-       photourl1: String,
-       photourl2: String,
-       photourl3: String,
-       photourl4: String,
-       photourl5: String,
-       microcenterlink: String,
-       amazonlink: String,
-       newegglink: String,
-       bestbuylink: String,
-       socket: String,
-       formfactor: String,
-       chipset: String,
-       memorytype: String,
-       memoryslots: String,
-       pcieslots: String,
-       sataports: String,
-       m2slots: String) {
-    self.socket = socket
-    self.formfactor = formfactor
-    self.chipset = chipset
-    self.memorytype = memorytype
-    self.memoryslots = memoryslots
-    self.pcieslots = pcieslots
-    self.sataports = sataports
-    self.m2slots = m2slots
-    super.init(id: id,
-               name: name,
-               brand: brand,
-               description: description,
-               photourl1: photourl1,
-               photourl2: photourl2,
-               photourl3: photourl3,
-               photourl4: photourl4,
-               photourl5: photourl5,
-               microcenterlink: microcenterlink,
-               amazonlink: amazonlink,
-               newegglink: newegglink,
-               bestbuylink: bestbuylink)
-  }
-  
-  required init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.socket = try container.decode(String.self, forKey: .socket)
-    self.formfactor = try container.decode(String.self, forKey: .formfactor)
-    self.chipset = try container.decode(String.self, forKey: .chipset)
-    self.memorytype = try container.decode(String.self, forKey: .memorytype)
-    self.memoryslots = try container.decode(String.self, forKey: .memoryslots)
-    self.pcieslots = try container.decode(String.self, forKey: .pcieslots)
-    self.sataports = try container.decode(String.self, forKey: .sataports)
-    self.m2slots = try container.decode(String.self, forKey: .m2slots)
-    try super.init(from: decoder)
-  }
-  
+
 }
 
 class CPU: PCComponent {
   
-  public var socket: String
-  public var cores: String
-  public var threads: String
-  public var baseclock: String
-  public var boostclock: String
-  public var tdp: String
-  public var integratedgraphics: String
-  
-  enum CodingKeys: String, CodingKey {
-    case socket
-    case cores
-    case threads
-    case baseclock
-    case boostclock
-    case tdp
-    case integratedgraphics
-  }
-  
-  init(id: Int,
-       name: String,
-       brand: String,
-       description: String,
-       photourl1: String,
-       photourl2: String,
-       photourl3: String,
-       photourl4: String,
-       photourl5: String,
-       microcenterlink: String,
-       amazonlink: String,
-       newegglink: String,
-       bestbuylink: String,
-       socket: String,
-       cores: String,
-       threads: String,
-       baseclock: String,
-       boostclock: String,
-       tdp: String,
-       integratedgraphics: String) {
-    self.socket = socket
-    self.cores = cores
-    self.threads = threads
-    self.baseclock = baseclock
-    self.boostclock = boostclock
-    self.tdp = tdp
-    self.integratedgraphics = integratedgraphics
-    super.init(id: id,
-               name: name,
-               brand: brand,
-               description: description,
-               photourl1: photourl1,
-               photourl2: photourl2,
-               photourl3: photourl3,
-               photourl4: photourl4,
-               photourl5: photourl5,
-               microcenterlink: microcenterlink,
-               amazonlink: amazonlink,
-               newegglink: newegglink,
-               bestbuylink: bestbuylink)
-  }
-  
-  required init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.socket = try container.decode(String.self, forKey: .socket)
-    self.cores = try container.decode(String.self, forKey: .cores)
-    self.threads = try container.decode(String.self, forKey: .threads)
-    self.baseclock = try container.decode(String.self, forKey: .baseclock)
-    self.boostclock = try container.decode(String.self, forKey: .boostclock)
-    self.tdp = try container.decode(String.self, forKey: .tdp)
-    self.integratedgraphics = try container.decode(String.self, forKey: .integratedgraphics)
-    try super.init(from: decoder)
-  }
-  
 }
 
 class GPU: PCComponent {
-  
-  public var chipset: String
-  public var memory: String
-  public var tdp: String
-  
-  enum CodingKeys: String, CodingKey {
-    case chipset
-    case memory
-    case tdp
-  }
-  
-  init(id: Int,
-       name: String,
-       brand: String,
-       description: String,
-       photourl1: String,
-       photourl2: String,
-       photourl3: String,
-       photourl4: String,
-       photourl5: String,
-       microcenterlink: String,
-       amazonlink: String,
-       newegglink: String,
-       bestbuylink: String,
-       chipset: String,
-       memory: String,
-       tdp: String) {
-    self.chipset = chipset
-    self.memory = memory
-    self.tdp = tdp
-    super.init(id: id,
-               name: name,
-               brand: brand,
-               description: description,
-               photourl1: photourl1,
-               photourl2: photourl2,
-               photourl3: photourl3,
-               photourl4: photourl4,
-               photourl5: photourl5,
-               microcenterlink: microcenterlink,
-               amazonlink: amazonlink,
-               newegglink: newegglink,
-               bestbuylink: bestbuylink)
-  }
-  
-  required init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.chipset = try container.decode(String.self, forKey: .chipset)
-    self.memory = try container.decode(String.self, forKey: .memory)
-    self.tdp = try container.decode(String.self, forKey: .tdp)
-    try super.init(from: decoder)
-  }
   
 }
 

@@ -14,26 +14,26 @@ struct GPUDetailView: View {
         VStack {
           ScrollView(.horizontal) {
             HStack {
-              ConditionalPhotoView(component: component)
+              ComponentPhotoView(component: component)
             }
             .scrollTargetLayout()
           }
           .scrollTargetBehavior(.viewAligned)
-          Text(component.name)
+          Text(component.title)
             .font(.title)
           Text(component.brand)
             .font(.title2)
           Text(component.description)
             .font(.body)
-          HStack {
-            Text("Chipset: \(component.chipset)")
-            Spacer()
-          }
-          HStack {
-            Text("Memory: \(component.memory)")
-            Spacer()
-            Text("TDP: \(component.tdp)")
-          }
+//          HStack {
+//            Text("Chipset: \(component.chipset)")
+//            Spacer()
+//          }
+//          HStack {
+//            Text("Memory: \(component.memory)")
+//            Spacer()
+//            Text("TDP: \(component.tdp)")
+//          }
           ConditionalLinkView(component: component)
           Button {
             // TODO: Add Component to selected components
@@ -49,6 +49,6 @@ struct GPUDetailView: View {
     }
 }
 
-#Preview {
-    GPUDetailView(component: MockData().mockGPU)
-}
+//#Preview {
+//    GPUDetailView(component: MockData().mockGPU)
+//}

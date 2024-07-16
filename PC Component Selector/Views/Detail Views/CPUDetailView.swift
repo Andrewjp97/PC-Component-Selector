@@ -14,36 +14,36 @@ struct CPUDetailView: View {
         VStack {
           ScrollView(.horizontal) {
             HStack {
-              ConditionalPhotoView(component: component)
+              ComponentPhotoView(component: component)
             }
             .scrollTargetLayout()
           }
           .scrollTargetBehavior(.viewAligned)
-          Text(component.name)
+          Text(component.title)
             .font(.title)
           Text(component.brand)
             .font(.title2)
           Text(component.description)
             .font(.body)
-          HStack {
-            Text("Cores: \(component.cores)")
-            Spacer()
-            Text("Threads: \(component.threads)")
-          }
-          HStack {
-            Text("Socket: \(component.socket)")
-            Spacer()
-            Text("TDP: \(component.tdp)")
-          }
-          HStack {
-            Text("Base Clock: \(component.baseclock)")
-            Spacer()
-            Text("Boost Clock \(component.boostclock)")
-          }
-          HStack {
-            Text("Integrated Graphics: \(component.integratedgraphics)")
-            Spacer()
-          }
+//          HStack {
+//            Text("Cores: \(component.cores)")
+//            Spacer()
+//            Text("Threads: \(component.threads)")
+//          }
+//          HStack {
+//            Text("Socket: \(component.socket)")
+//            Spacer()
+//            Text("TDP: \(component.tdp)")
+//          }
+//          HStack {
+//            Text("Base Clock: \(component.baseclock)")
+//            Spacer()
+//            Text("Boost Clock \(component.boostclock)")
+//          }
+//          HStack {
+//            Text("Integrated Graphics: \(component.integratedgraphics)")
+//            Spacer()
+//          }
           ConditionalLinkView(component: component)
           Button {
             // TODO: Add Component to selected components
@@ -59,6 +59,6 @@ struct CPUDetailView: View {
     }
 }
 
-#Preview {
-  CPUDetailView(component: MockData().mockCPU)
-}
+//#Preview {
+//  CPUDetailView(component: MockData().mockCPU)
+//}

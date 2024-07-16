@@ -14,12 +14,12 @@ struct RAMDetailView: View {
         VStack {
           ScrollView(.horizontal) {
             HStack {
-              ConditionalPhotoView(component: component)
+              ComponentPhotoView(component: component)
             }
             .scrollTargetLayout()
           }
           .scrollTargetBehavior(.viewAligned)
-          Text(component.name)
+          Text(component.title)
             .font(.title)
           Text(component.brand)
             .font(.title2)
