@@ -27,32 +27,19 @@ struct RAMDetailView: View {
             .font(.body)
           Text("Specifications")
             .font(.title3)
-          ConditionalComponentSpecification(componentSpecificationTitle: "DIMMs",
-                                            componentSpecification: component.dims)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Speed",
-                                            componentSpecification: component.speed)
-          ConditionalComponentSpecification(componentSpecificationTitle: "DDR Class",
-                                            componentSpecification: component.ddrclass)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Capacity",
-                                            componentSpecification: component.capacity)
-          ConditionalComponentSpecification(componentSpecificationTitle: "CAS Latency",
-                                            componentSpecification: component.caslatency)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Timing",
-                                            componentSpecification: component.timing)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Heat Spreader",
-                                            componentSpecification: component.heatspreader)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Voltage",
-                                            componentSpecification: component.voltage)
-          ConditionalComponentSpecification(componentSpecificationTitle: "ECC",
-                                            componentSpecification: component.ecc)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Color",
-                                            componentSpecification: component.color)
-          ConditionalComponentSpecification(componentSpecificationTitle: "RGB",
-                                            componentSpecification: component.rgb)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Buffered or Registered",
-                                            componentSpecification: component.bufferedorregistered)
-          ConditionalComponentSpecification(componentSpecificationTitle: "Model",
-                                            componentSpecification: component.model)
+          ConditionalComponentSpecification(title: "DIMMs",         specification: component.dims)
+          ConditionalComponentSpecification(title: "Speed",         specification: component.speed)
+          ConditionalComponentSpecification(title: "DDR Class",     specification: component.ddrclass)
+          ConditionalComponentSpecification(title: "Capacity",      specification: component.capacity)
+          ConditionalComponentSpecification(title: "CAS Latency",   specification: component.caslatency)
+          ConditionalComponentSpecification(title: "Timing",        specification: component.timing)
+          ConditionalComponentSpecification(title: "Heat Spreader", specification: component.heatspreader)
+          ConditionalComponentSpecification(title: "Voltage",       specification: component.voltage)
+          ConditionalComponentSpecification(title: "ECC",           specification: component.ecc)
+          ConditionalComponentSpecification(title: "Color",         specification: component.color)
+          ConditionalComponentSpecification(title: "RGB",           specification: component.rgb)
+          ConditionalComponentSpecification(title: "Buffered or Registered", specification: component.bufferedorregistered)
+          ConditionalComponentSpecification(title: "Model",         specification: component.model)
           Text("Available For Purchase At:")
             .font(.title3)
           ConditionalLinkView(component: component)

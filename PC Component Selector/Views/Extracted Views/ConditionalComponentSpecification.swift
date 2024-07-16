@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ConditionalComponentSpecification: View {
-  var componentSpecificationTitle: String
-  var componentSpecification: String
+  var title: String
+  var specification: String
     var body: some View {
-      if !componentSpecification.isEmpty {
+      if !specification.isEmpty {
         HStack {
-          Text(componentSpecificationTitle)
+          Text(title)
             .bold()
           Spacer()
-          Text(componentSpecification)
+          Text(specification)
         }
         .padding([.leading, .trailing])
       }
@@ -27,6 +27,6 @@ struct ConditionalComponentSpecification: View {
 }
 
 #Preview {
-  ConditionalComponentSpecification(componentSpecificationTitle: "Test",
-                                    componentSpecification: "Test Spec")
+  ConditionalComponentSpecification(title: "Test",
+                                    specification: "Test Spec")
 }

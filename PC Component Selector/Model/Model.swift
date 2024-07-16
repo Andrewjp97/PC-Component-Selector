@@ -162,6 +162,146 @@ class RAM: PCComponent {
 
 class Motherboard: PCComponent {
 
+  public var platform: String
+  public var socket: String
+  public var chipset: String
+  public var model: String
+  public var dimms: String
+  public var maxsupportedmemory: String
+  public var pcie: String
+  public var sataports: String
+  public var m2ports: String
+  public var sataraid: String
+  public var lan: String
+  public var wifi: String
+  public var reario: String
+  public var otherconnectors: String
+  public var formfactor: String
+  public var dimensions: String
+  public var memorysupport: String
+  public var audio: String
+  public var internalusb: String
+  public var powerconnector: String
+  public var bluetooth: String
+  
+  enum CodingKeys: String, CodingKey {
+    
+    case platform
+    case socket
+    case chipset
+    case model
+    case dimms
+    case maxsupportedmemory
+    case pcie
+    case sataports
+    case m2ports
+    case sataraid
+    case lan
+    case wifi
+    case reario
+    case otherconnectors
+    case formfactor
+    case dimensions
+    case memorysupport
+    case audio
+    case internalusb
+    case powerconnector
+    case bluetooth
+    
+  }
+  
+  init(id: Int,
+       title: String,
+       brand: String,
+       description: String,
+       photourls: [String],
+       microcenterlink: String,
+       amazonlink: String,
+       newegglink: String,
+       bestbuylink: String,
+       platform: String,
+       socket: String,
+       chipset: String,
+       model: String,
+       dimms: String,
+       maxsupportedmemory: String,
+       pcie: String,
+       sataports: String,
+       m2ports: String,
+       sataraid: String,
+       lan: String,
+       wifi: String,
+       reario: String,
+       otherconnectors: String,
+       formfactor: String,
+       dimensions: String,
+       memorysupport: String,
+       audio: String,
+       internalusb: String,
+       powerconnector: String,
+       bluetooth: String) {
+    
+    self.platform = platform
+    self.socket = socket
+    self.chipset = chipset
+    self.model = model
+    self.dimms = dimms
+    self.maxsupportedmemory = maxsupportedmemory
+    self.pcie = pcie
+    self.sataports = sataports
+    self.m2ports = m2ports
+    self.sataraid = sataraid
+    self.lan = lan
+    self.wifi = wifi
+    self.reario = reario
+    self.otherconnectors = otherconnectors
+    self.formfactor = formfactor
+    self.dimensions = dimensions
+    self.memorysupport = memorysupport
+    self.audio = audio
+    self.internalusb = internalusb
+    self.powerconnector = powerconnector
+    self.bluetooth = bluetooth
+    super.init(id: id,
+               title: title,
+               brand: brand,
+               description: description,
+               photourls: photourls,
+               microcenterlink: microcenterlink,
+               amazonlink: amazonlink,
+               newegglink: newegglink,
+               bestbuylink: bestbuylink)
+    
+  }
+  
+  required init(from decoder: Decoder) throws {
+    
+    let container =         try decoder.container(keyedBy: CodingKeys.self)
+    platform =              try container.decode(String.self, forKey: .platform)
+    socket =                try container.decode(String.self, forKey: .socket)
+    chipset =               try container.decode(String.self, forKey: .chipset)
+    model =                 try container.decode(String.self, forKey: .model)
+    dimms =                 try container.decode(String.self, forKey: .dimms)
+    maxsupportedmemory =    try container.decode(String.self, forKey: .maxsupportedmemory)
+    pcie =                  try container.decode(String.self, forKey: .pcie)
+    sataports =             try container.decode(String.self, forKey: .sataports)
+    m2ports =               try container.decode(String.self, forKey: .m2ports)
+    sataraid =              try container.decode(String.self, forKey: .sataraid)
+    lan =                   try container.decode(String.self, forKey: .lan)
+    wifi =                  try container.decode(String.self, forKey: .wifi)
+    reario =                try container.decode(String.self, forKey: .reario)
+    otherconnectors =       try container.decode(String.self, forKey: .otherconnectors)
+    formfactor =            try container.decode(String.self, forKey: .formfactor)
+    dimensions =            try container.decode(String.self, forKey: .dimensions)
+    memorysupport =         try container.decode(String.self, forKey: .memorysupport)
+    audio =                 try container.decode(String.self, forKey: .audio)
+    internalusb =           try container.decode(String.self, forKey: .internalusb)
+    powerconnector =        try container.decode(String.self, forKey: .powerconnector)
+    bluetooth =             try container.decode(String.self, forKey: .bluetooth)
+    try super.init(from: decoder)
+    
+  }
+    
 }
 
 class CPU: PCComponent {
