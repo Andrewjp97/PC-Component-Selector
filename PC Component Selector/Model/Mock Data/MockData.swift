@@ -79,8 +79,34 @@ struct MockData {
                                            powerconnector: "1 X ATX 24 Pin, 2 X 8 Pin EPS",
                                            bluetooth: "Yes")
   
-//  public let mockCPU = CPU()
-//                           
-//  public let mockGPU = GPU()
+  public let mockCPU = CPU(id: 1,
+                           title: "Example CPU",
+                           brand: "PatersonTech",
+                           description: "This is an example CPU. It is a placeholder for the real thing.",
+                           photourls: ["http://patersontech.duckdns.org:8043/images/0001I.jpeg",
+                                       "http://patersontech.duckdns.org:8043/images/0001J.jpeg",
+                                       "http://patersontech.duckdns.org:8043/images/0001K.jpeg"],
+                           microcenterlink: "test",
+                           amazonlink: "test",
+                           newegglink: "test",
+                           bestbuylink: "test",
+                           model: "Example Model",
+                           socket: "AM4",
+                           cores: "8",
+                           threads: "16",
+                           baseclock: "3.6GHz",
+                           boostclock: "4.2GHz",
+                           l1cache: "512KB",
+                           l2cache: "4MB",
+                           l3cache: "16MB",
+                           manufacturingprocess: "7nm",
+                           memorysupport: "DDR5",
+                           eccsupport: "No",
+                           integratedgraphics: "No",
+                           memorychannels: "Dual",
+                           graphicsbasefrequency: "",
+                           graphicsboostfrequency: "",
+                           tdp: "65W",
+                           thermalsolution: "No")
   
 }

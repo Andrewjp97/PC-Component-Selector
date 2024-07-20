@@ -18,7 +18,7 @@ public class PCComponent: Codable, Identifiable {
   public var amazonlink: String
   public var newegglink: String
   public var bestbuylink: String
-
+  
   init(id: Int,
        title: String,
        brand: String,
@@ -51,7 +51,7 @@ public class PCComponent: Codable, Identifiable {
     newegglink =      try container.decode(String.self, forKey: .newegglink)
     bestbuylink =     try container.decode(String.self, forKey: .bestbuylink)
   }
-
+  
   
 }
 
@@ -161,7 +161,7 @@ class RAM: PCComponent {
 }
 
 class Motherboard: PCComponent {
-
+  
   public var platform: String
   public var socket: String
   public var chipset: String
@@ -301,10 +301,135 @@ class Motherboard: PCComponent {
     try super.init(from: decoder)
     
   }
-    
+  
 }
 
 class CPU: PCComponent {
+  
+  public var model: String
+  public var socket: String
+  public var cores: String
+  public var threads: String
+  public var baseclock: String
+  public var boostclock: String
+  public var l1cache: String
+  public var l2cache: String
+  public var l3cache: String
+  public var manufacturingprocess: String
+  public var memorysupport: String
+  public var eccsupport: String
+  public var integratedgraphics: String
+  public var memorychannels: String
+  public var graphicsbasefrequency: String
+  public var graphicsboostfrequency: String
+  public var tdp: String
+  public var thermalsolution: String
+  
+  enum CodingKeys: String, CodingKey {
+    
+    case model
+    case socket
+    case cores
+    case threads
+    case baseclock
+    case boostclock
+    case l1cache
+    case l2cache
+    case l3cache
+    case manufacturingprocess
+    case memorysupport
+    case eccsupport
+    case integratedgraphics
+    case memorychannels
+    case graphicsbasefrequency
+    case graphicsboostfrequency
+    case tdp
+    case thermalsolution
+    
+  }
+  
+  init(id: Int,
+       title: String,
+       brand: String,
+       description: String,
+       photourls: [String],
+       microcenterlink: String,
+       amazonlink: String,
+       newegglink: String,
+       bestbuylink: String,
+       model: String,
+       socket: String,
+       cores: String,
+       threads: String,
+       baseclock: String,
+       boostclock: String,
+       l1cache: String,
+       l2cache: String,
+       l3cache: String,
+       manufacturingprocess: String,
+       memorysupport: String,
+       eccsupport: String,
+       integratedgraphics: String,
+       memorychannels: String,
+       graphicsbasefrequency: String,
+       graphicsboostfrequency: String,
+       tdp: String,
+       thermalsolution: String) {
+    
+    self.model = model
+    self.socket = socket
+    self.cores = cores
+    self.threads = threads
+    self.baseclock = baseclock
+    self.boostclock = boostclock
+    self.l1cache = l1cache
+    self.l2cache = l2cache
+    self.l3cache = l3cache
+    self.manufacturingprocess = manufacturingprocess
+    self.memorysupport = memorysupport
+    self.eccsupport = eccsupport
+    self.integratedgraphics = integratedgraphics
+    self.memorychannels = memorychannels
+    self.graphicsbasefrequency = graphicsbasefrequency
+    self.graphicsboostfrequency = graphicsboostfrequency
+    self.tdp = tdp
+    self.thermalsolution = thermalsolution
+    super.init(id: id,
+               title: title,
+               brand: brand,
+               description: description,
+               photourls: photourls,
+               microcenterlink: microcenterlink,
+               amazonlink: amazonlink,
+               newegglink: newegglink,
+               bestbuylink: bestbuylink)
+    
+  }
+  
+  required init(from decoder: Decoder) throws {
+    
+    let container =             try decoder.container(keyedBy: CodingKeys.self)
+    model =                     try container.decode(String.self, forKey: .model)
+    socket =                    try container.decode(String.self, forKey: .socket)
+    cores =                     try container.decode(String.self, forKey: .cores)
+    threads =                   try container.decode(String.self, forKey: .threads)
+    baseclock =                 try container.decode(String.self, forKey: .baseclock)
+    boostclock =                try container.decode(String.self, forKey: .boostclock)
+    l1cache =                   try container.decode(String.self, forKey: .l1cache)
+    l2cache =                   try container.decode(String.self, forKey: .l2cache)
+    l3cache =                   try container.decode(String.self, forKey: .l3cache)
+    manufacturingprocess =      try container.decode(String.self, forKey: .manufacturingprocess)
+    memorysupport =             try container.decode(String.self, forKey: .memorysupport)
+    eccsupport =                try container.decode(String.self, forKey: .eccsupport)
+    integratedgraphics =        try container.decode(String.self, forKey: .integratedgraphics)
+    memorychannels =            try container.decode(String.self, forKey: .memorychannels)
+    graphicsbasefrequency =     try container.decode(String.self, forKey: .graphicsbasefrequency)
+    graphicsboostfrequency =    try container.decode(String.self, forKey: .graphicsboostfrequency)
+    tdp =                       try container.decode(String.self, forKey: .tdp)
+    thermalsolution =           try container.decode(String.self, forKey: .thermalsolution)
+    try super.init(from: decoder)
+    
+  }
   
 }
 
